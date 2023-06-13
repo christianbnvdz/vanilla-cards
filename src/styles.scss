@@ -1,0 +1,32 @@
+@import "vanilla-framework";
+@include vanilla;
+
+.custom-p-card {
+    @extend .p-card--highlighted;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-p-card__header {
+    @extend .p-card__header;
+
+    border-top: 4px solid #AD79A8;
+    border-bottom: unset;
+    padding: 0.75rem 1rem;
+}
+
+.custom-p-card__content {
+    @extend .p-card__content;
+
+    border-top: 1px dotted #BEB8B2;
+    margin: 0 0.5rem;
+    padding: 1rem 0.5rem;
+    flex-grow: 1;
+}
+
+.custom-p-card__footer {
+    @extend .custom-p-card__content;
+
+    flex-grow: unset;
+}
